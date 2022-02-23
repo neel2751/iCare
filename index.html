@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/Fav.svg" type="image/svg+xml" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+    <title>iCare</title>
+  </head>
+  <body>
+    <div class="Main">
+      <!-- Main Container -->
+      <div class="relative bg-white sticky shadow-lg top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div
+            class="flex justify-between items-center py-6 md:justify-start md:space-x-10"
+          >
+            <div class="flex justify-start lg:w-0 lg:flex-1">
+              <a href="#Home">
+                <!-- <span class="logo">CompanyHouse</span> -->
+                <img
+                  class="h-8 w-20 sm:h-10"
+                  src="./images/logoo.svg"
+                  alt="iCare"
+                />
+              </a>
+            </div>
+            <div class="-mr-2 -my-2 md:hidden">
+              <button
+                class="mobile-menu-button bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                aria-expanded="false"
+              >
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+            <nav class="hidden md:flex space-x-10">
+              <div class="relative">
+                <a
+                  href="#Home"
+                  type="button"
+                  class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900"
+                  aria-expanded="false"
+                >
+                  <span>Home</span>
+                </a>
+              </div>
+
+              <a
+                href="#About"
+                class="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                About
+              </a>
+              <a
+                href="#Services"
+                class="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                Services
+              </a>
+              <a
+                href="#Goal"
+                class="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                Our Goal
+              </a>
+              <a
+                href="#Contactus"
+                class="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                Contact Us
+              </a>
+            </nav>
+            <div
+              class="hidden md:flex items-center justify-end md:flex-1 lg:w-0"
+            >
+              <a
+                href="tel:7928655920"
+                class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                +91 9876543210
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!--
+      Mobile menu, show/hide based on mobile menu state.
+  
+      Entering: "duration-200 ease-out"
+        From: "opacity-0 scale-95"
+        To: "opacity-100 scale-100"
+      Leaving: "duration-100 ease-in"
+        From: "opacity-100 scale-100"
+        To: "opacity-0 scale-95"
+    -->
+        <div
+          class="mobile-menu md:hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden"
+        >
+          <div
+            class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50"
+          >
+            <div class="pt-5 pb-6 px-5">
+              <div class="flex items-center justify-between">
+                <div>
+                  <!-- <span class="logo">CompanyHome</span> -->
+                  <img
+                    class="h-8 w-auto sm:h-10"
+                    src="./images/CompanyLogo.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="-mr-2">
+                  <button
+                    type="button"
+                    class="close bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                  >
+                    <span class="sr-only">Close menu</span>
+                    <!-- Heroicon name: outline/x -->
+                    <svg
+                      class="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="py-6 px-5 space-y-6">
+              <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+                <a
+                  href="#Home"
+                  class="text-base font-medium text-gray-900 hover:text-gray-700"
+                >
+                  Home
+                </a>
+
+                <a
+                  href="#About"
+                  class="text-base font-medium text-gray-900 hover:text-gray-700"
+                >
+                  About
+                </a>
+
+                <a
+                  href="#Services"
+                  class="text-base font-medium text-gray-900 hover:text-gray-700"
+                >
+                  Services
+                </a>
+                <a
+                  href="#Goal"
+                  class="text-base font-medium text-gray-900 hover:text-gray-700"
+                >
+                  Our Goal
+                </a>
+                <a
+                  href="#Contactus"
+                  class="text-base font-medium text-gray-900 hover:text-gray-700"
+                >
+                  Contact us
+                </a>
+              </div>
+              <div>
+                <p class="mt-6 text-center text-base font-medium text-gray-500">
+                  <a
+                    href="tel:7928655920"
+                    class="text-indigo-600 hover:text-indigo-500"
+                  >
+                    +91 9876543210
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Home Section Start -->
+      <section id="Home" class="body-font topnav lg:mt-0 py-10 lg:px-24 px-5">
+        <div
+          id="home"
+          class="rounded container mx-auto flex px-12 py-10 md:flex-row flex-col items-center"
+        >
+          <div
+            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+          >
+            <h1
+              id="goal"
+              class="gsapset title-font antialiased sm:subpixel-antialiased md:antialiased sm:text-4xl text-3xl mb-4 font-medium"
+            >
+              Take our mobile services and chill
+              <!-- <br class="hidden lg:inline-block" /> -->
+            </h1>
+            <p class="gsapset mb-6 leading-relaxed">
+              The mobile reparing services is an oraganization that provide a
+              myriad of <br class="hidden lg:inline-block" />
+              services and genuine experiences, for thriving business and
+              professionals.
+            </p>
+            <div class="svg hide" id="svg"></div>
+            <div class="flex justify-center">
+              <button
+                id="button"
+                class="gsapset inline-flex text-white border-0 py-2 px-6 focus:outline-none rounded"
+              >
+                Contact Us
+              </button>
+            </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img
+              class="gsaphomeimg object-cover object-center rounded"
+              alt="hero"
+              src="./images/Home.svg"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Home Section End -->
+
+      <!-- Providing Section Start -->
+      <section id="About" class="body-font py-10 lg:px-24">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col items-center text-center w-full mb-10">
+            <h2
+              class="text-sm about_us font-semibold tracking-widest text-center mb-2"
+            >
+              ABOUT US
+            </h2>
+            <h1
+              id="goal"
+              class="sm:text-xl text-3xl lg:text-4xl font-semibold text-gray-900 mt-2 mb-4"
+            >
+              Why we are the best
+            </h1>
+            <h6 class="about_support tracking-normal lg:w-1/3 text-center mb-8">
+              We belive all of us are spacial. Even though we have different
+              interests, different brain. We can be smart in our own way!
+            </h6>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/3">
+              <div
+                class="flex rounded-lg h-full border-2 rounded border-gray-100 p-8 flex-col"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-[#222222]text-white flex-shrink-0"
+                  >
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-gray-900 text-lg title-font font-medium">
+                    Powerful Accessories
+                  </h2>
+                </div>
+                <div class="flex-grow">
+                  <p class="leading-relaxed about_support text-base">
+                    We have such Powerful Accessories with fast work and less
+                    time.We have more equipment to smart work for our customers.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div
+                class="flex rounded-lg h-full border-2 rounded border-gray-100 p-8 flex-col"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-[#222222]text-white flex-shrink-0"
+                  >
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-gray-900 text-lg title-font font-medium">
+                    Online Booking
+                  </h2>
+                </div>
+                <div class="flex-grow">
+                  <p class="leading-relaxed about_support text-base">
+                    We are providing to online booking for your future home
+                    extensions.You can choose both way to call us and send via
+                    email to reach our team.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div
+                class="flex rounded-lg h-full border-2 rounded border-gray-100 p-8 flex-col"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-[#222222]text-white flex-shrink-0"
+                  >
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-gray-900 text-lg title-font font-medium">
+                    Smart Work with low rate
+                  </h2>
+                </div>
+                <div class="flex-grow">
+                  <p class="leading-relaxed about_support text-base">
+                    Best quality reparing & best device reapir quality and much
+                    more affordable price. we can be smart in our own way. Even
+                    though you all of us are spacial.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Providing Section End -->
+
+      <!-- Services Section Start -->
+      <section id="Services" class="body-font py-10 lg:px-24 px-5">
+        <div id="home" class="container px-12 py-10 rounded mx-auto">
+          <div class="flex flex-col items-start justify-start w-full mb-20">
+            <h1 class="text-sm about_us font-semibold tracking-widest mb-1">
+              SERVICES
+            </h1>
+            <h1
+              id="goal"
+              class="text-3xl text-center sm:text-2xl text-2xl font-medium title-font text-gray-900"
+            >
+              Our top Services
+            </h1>
+          </div>
+
+          <div class="flex flex-wrap -m-2">
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Mobile Reparing
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    iCloud Unlock
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Camera Repair
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    IC Reballing
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    iPhone Unlock
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Water Damge
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Mobile Hang
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Charging Problem
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Network Problem
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Power failure
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Keypad problem
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:mb-4 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Flashing
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Software Update
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Mic Speaker Problem
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Replacement LCD
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+              <div class="h-full flex items-center ser_box p-4">
+                <div class="flex-grow">
+                  <h2
+                    class="flex justify-center ser_text text-gray-900 font-medium"
+                  >
+                    Battery problem
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section End -->
+
+      <!-- Customer Goal Section Start -->
+      <section id="Goal" class="py-5 lg:px-24 px-5">
+        <div
+          class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
+        >
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img
+              class="object-cover object-center rounded"
+              alt="hero"
+              src="./images/Customer.svg"
+            />
+          </div>
+          <div
+            class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
+          >
+            <h1
+              id="goal"
+              class="sm:text-4xl text-2xl lg:text-3xl mb-4 font-semibold text-gray-900"
+            >
+              Our review from
+              <br class="hidden lg:inline-block" />Our customer
+            </h1>
+            <p
+              id="review"
+              class="mb-8 about_us text-sm font-medium leading-relaxed"
+            >
+              Our people keep us at the top of your game. That’s why we’ll
+              always support you on your journey, providing you opportunities
+              like mentorship programmes, foundation days and learning and
+              development funding.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Customer Goal Section End -->
+
+      <!-- Contact Us Section Start -->
+      <section class="body-font py-10 lg:px-24 px-5">
+        <div
+          id="callus"
+          class="rounded container mx-auto flex lg:px-10 px-5 py-5 lg:py-10 md:flex-row flex-col items-center"
+        >
+          <div
+            class="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+          >
+            <!-- <p class="mb-5 leading-relaxed cusplan">
+              Call us today for your Customer Plan.
+            </p> -->
+            <svg style="width: 256px" viewBox="0 0 120 68" id="svgcir">
+              <g
+                fill="none"
+                stroke="#222222"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.4"
+              >
+                <path
+                  class="fic"
+                  d="M105 10C28-9-29 40 34 56c62 16 91-29 66-29"
+                ></path>
+                <path
+                  class="sec"
+                  d="M109 16C82-20-56 21 30 55s105-27 75-45"
+                ></path>
+              </g>
+              <text
+                style="
+                  fill: #222222;
+                  width: max-content;
+                  font-weight: 600;
+                  letter-spacing: -0.2px;
+                  font-size: 0.3em;
+                "
+                x="50%"
+                y="50%"
+                dy=".3em"
+                text-anchor="middle"
+              >
+                Call us today for your Reparing Plan.
+              </text>
+            </svg>
+            <div class="sm:w-1/2 w-full flex justify-center">
+              <a href="tel:7928655920">
+                <div class="rounded flex py-2 h-full items-center">
+                  <span class="cusplans w-4/5 title-font font-medium"
+                    >+91 9876543210</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div class="sm:w-1/2 w-full flex justify-center">
+              <a href="mailto:meetshah721@gmail.com">
+                <div class="rounded flex py-2 h-full items-center">
+                  <span class="cusplans title-font font-medium">Meet Shah</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div
+            style="display: contents"
+            class="lg:max-w-lg mb-0 md:items-center lg:w-full md:w-full sm:w-full"
+          >
+            <div class="flex md:block hidden">
+              <svg
+                style="height: 6em; transform: scaleX(-1) rotate(-5deg)"
+                class="md:block hidden"
+                id="svgarr"
+                viewBox="0 0 196 48"
+                fill="none"
+                stroke="white"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.4"
+              >
+                <g stroke="#222222">
+                  <path
+                    class="arro"
+                    d="M154 21c6-2 13-4 23 0-13-5-16-8-18-15"
+                  />
+                  <path
+                    class="line"
+                    d="M14 28c29-22 101-5 104 9 1 7-18 7 0-12s53-6 53-6"
+                  />
+                </g>
+              </svg>
+            </div>
+            <img
+              class="object-cover object-center w-1/3 rounded"
+              alt="hero"
+              src="./images/CallMeet.svg"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Contact Us Section End -->
+
+      <!-- Footer Start -->
+      <footer id="Contactus">
+        <div class="py-20 px-5">
+          <div class="flex flex-col items-center text-center w-full mb-2">
+            <h2
+              class="text-sm about_us font-semibold tracking-widest text-center"
+            >
+              CONTACT US
+            </h2>
+            <h1
+              id="goal"
+              class="sm:text-xl text-3xl lg:text-4xl font-semibold text-gray-900 mt-2 mb-2"
+            >
+              Get new offer’s on your email
+            </h1>
+            <h6 class="about_support tracking-normal lg:w-1/3 text-center mb-8">
+              Put your email address and get started!
+            </h6>
+          </div>
+          <div
+            class="relative flex justify-center sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2"
+          >
+            <input
+              placeholder="Enter your email"
+              type="text"
+              id="footer-field"
+              name="footer-field"
+              class="w-56 mr-2 bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-gray-200 focus:border-gray-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+
+            <button
+              class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-[#222222] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
+            >
+              Button
+            </button>
+          </div>
+        </div>
+        <div class="flex lg:flex-row flex-col lg:justify-around mt-10">
+          <div class="flex flex-col items-center mb-10">
+            <h1
+              class="lg:text-3xl text-2xl font-semibold tracking-tight text-gray-900 text-sm mb-2"
+            >
+              Find US
+            </h1>
+            <p class="about_support tracking-normal">
+              Near, Tower, Gana Anand, Gujarat
+            </p>
+          </div>
+          <div class="flex flex-col items-center mb-10">
+            <h1
+              class="lg:text-3xl text-2xl tracking-tight font-semibold text-gray-900 mb-2"
+            >
+              Get in touch
+            </h1>
+            <p class="about_support tracking-normal">
+              +91 9876543210 <br class="hidden lg:inline-block" />
+              Meetshsh
+            </p>
+          </div>
+          <div class="flex flex-col items-center mb-10">
+            <h1
+              class="lg:text-3xl text-2xl tracking-tight font-semibold text-gray-900 text-sm mb-2"
+            >
+              Find US
+            </h1>
+            <p class="about_support tracking-normal">
+              Near, Tower, Gana Anand, Gujarat
+            </p>
+          </div>
+        </div>
+        <div class="bg-gray-100">
+          <div
+            class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+          >
+            <p class="text-gray-500 text-sm text-center sm:text-left">
+              © 2022 iCare —
+              <a
+                href="http://instagram.com/neel_277"
+                rel="noopener noreferrer"
+                class="text-gray-600 ml-1"
+                target="_blank"
+                >@Neel</a
+              >
+            </p>
+            <span
+              class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
+            >
+              <a class="text-gray-500">
+                <svg
+                  fill="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                  ></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg
+                  fill="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                  ></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                  ></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="0"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="none"
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                  ></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </div>
+    <!-- Container Main End -->
+    <script src="./js/nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script>
+      const play = document.getElementById("button");
+
+      const svgContainer = document.getElementById("svg");
+      const animItem = bodymovin.loadAnimation({
+        wrapper: svgContainer,
+        animType: "svg",
+        loop: false,
+        autoplay: false,
+        path: "https://assets2.lottiefiles.com/packages/lf20_u4yrau.json",
+      });
+
+      play.addEventListener("click", () => {
+        svgContainer.classList.remove("hide");
+        animItem.goToAndPlay(0, true);
+      });
+
+      animItem.addEventListener("complete", () => {
+        svgContainer.classList.add("hide");
+      });
+    </script>
+    <script>
+      gsap.from(".gsapset", { opacity: 0, duration: 1, y: -50, stagger: 0.6 });
+      // gsap.from("#subtext", { opacity: 0, duration: 1, y: -50, stagger: 0.2 });
+      gsap.from(".gsaphomeimg", { opacity: 0, duration: 1, x: 50 });
+
+      // gsap.to(".gsapset", { opacity: 0, duration: 1, x: 50 });
+    </script>
+  </body>
+</html>

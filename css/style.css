@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --heading: #222222;
+  --paragraph: #808080;
+  --background: #f3f4f6;
+  /* ... */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  /* overflow: hidden; */
+  /* scroll-behavior: smooth; */
+}
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+}
+.stick {
+  padding: 5px 100px;
+  background-color: black important!;
+}
+
+.logo {
+  font-size: 1.4375em;
+  font-weight: 600;
+  color: var(--heading);
+}
+#home {
+  background-color: var(--background);
+}
+.title-font {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--heading);
+  letter-spacing: -2px;
+}
+.mb-6 {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--paragraph);
+  font-style: normal;
+  letter-spacing: -0.2px;
+}
+button {
+  background-color: var(--heading);
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+.about_us {
+  color: var(--paragraph);
+}
+.about_support {
+  color: var(--paragraph);
+  font-weight: 500;
+  font-size: 11px;
+}
+.why_text {
+  color: var(--heading);
+}
+.why_para {
+  color: var(--paragraph);
+  font-size: 11px;
+}
+.ser_box {
+  background-color: var(--heading);
+  border: none;
+  border-radius: 10px;
+}
+.ser_text {
+  color: white;
+}
+#Renovations {
+  width: 100px;
+}
+.text-3xl {
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--heading);
+}
+.text-xl {
+  color: var(--heading);
+}
+.goalcus {
+  font-size: 0.625em;
+  font-weight: 400;
+  color: var(--paragraph);
+  letter-spacing: -0.2px;
+  line-height: 1.6em;
+}
+.text-xs {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  color: var(--heading);
+}
+.text-lg {
+  letter-spacing: -1px;
+  font-size: 1.25em;
+}
+#subtext {
+  font-size: 0.625rem;
+  line-height: 1.6em;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--paragraph);
+}
+
+.fic {
+  stroke-dashoffset: 247;
+  stroke-dasharray: 247;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+.sec {
+  stroke-dashoffset: 296;
+  stroke-dasharray: 296;
+  transition: stroke-dashoffset 1.8s ease-in-out;
+}
+/* scroll */
+.fics {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 247;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+.secs {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 296;
+  transition: stroke-dashoffset 1.8s ease-in-out;
+}
+
+.arro {
+  stroke-dashoffset: 50;
+  stroke-dasharray: 50;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+.line {
+  stroke-dashoffset: 196;
+  stroke-dasharray: 196;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.arros {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 50;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+.lines {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 196;
+  transition: stroke-dashoffset 1.2s ease-in-out;
+}
+/* for new lottile svg */
+.svg {
+  width: 200px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.hide {
+  display: none;
+}
+/* svg lottile finish */
+
+#power {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--paragraph);
+}
+/* .text-base {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--paragraph);
+} */
+/* .leading-relaxed {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--paragraph);
+} */
+
+/* p {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--paragraph);
+} */
+#goal:after {
+  content: "";
+  display: block;
+  height: 20px;
+  background-image: url(../images/Line.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transform: rotateZ(13deg);
+}
+
+#review:before {
+  content: "";
+  display: block;
+  height: 55px;
+  margin-left: -45px;
+  background-image: url(../images/Review.svg);
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#callus {
+  background-color: #e9f3ff;
+}
+
+/* #callus ::after {
+  content: "";
+  top: 50px;
+  width: 1.5rem;
+  background-color: red;
+} */
+.cusplan {
+  width: max-content;
+  font-size: 0.938em;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  color: var(--heading);
+}
+.cusplans {
+  width: max-content;
+  font-size: 1.42em;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  color: var(--heading);
+}
+.footername {
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: var(--paragraph);
+}
+.footeremail {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--heading);
+}
+.footertitle {
+  font-size: 1.125em;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--heading);
+}
+li {
+  font-size: 0.813em;
+  font-weight: 500;
+  color: var(--paragraph);
+}
+
+/* .hoverimg:hover {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+} */
+.hoverimg:hover {
+  transform: translate3d(0px, 0px, 0px) scale3d(1.08, 1.08, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
