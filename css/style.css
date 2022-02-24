@@ -8,6 +8,7 @@
 }
 html {
   scroll-behavior: smooth;
+  transition: all 1s ease;
 }
 
 body {
@@ -34,6 +35,13 @@ body {
 }
 #home {
   background-color: var(--background);
+}
+
+.active_btn {
+  color: #222222;
+  border-bottom: 5px solid #222222;
+  border-radius: 2px;
+  transition: all 0.5s ease;
 }
 .title-font {
   font-size: 2.5em;
